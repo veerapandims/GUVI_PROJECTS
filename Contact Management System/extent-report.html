@@ -1,0 +1,2132 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Sep 15, 2025 11:10:04 pm</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='73.913%'><span class='strong'>17</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='26.087%'>6</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Add Contact - Missing Required Fields</span>
+						<span class='test-time'>Sep 15, 2025 11:10:07 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:10:07 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:10:13 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+963ms</span>
+</div>
+<div class='test-desc'>Validate error for empty first/last name </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:09 pm</td>
+				<td class='step-details'>
+						URL Loaded :: https://thinking-tester-contact-list.herokuapp.com/login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:10 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:10 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:10 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:13 pm</td>
+				<td class='step-details'>
+						Clicked Add Contact
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:13 pm</td>
+				<td class='step-details'>
+						Left First Name blank
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:13 pm</td>
+				<td class='step-details'>
+						Left Last Name blank
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:13 pm</td>
+				<td class='step-details'>
+						Submitted Contact Form
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:10:13 pm</td>
+				<td class='step-details'>
+						Proper validation errors displayed for missing required fields
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Add Contact - Valid Details</span>
+						<span class='test-time'>Sep 15, 2025 11:10:14 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:10:14 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:10:23 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+469ms</span>
+</div>
+<div class='test-desc'>Add a contact with all valid fields </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:16 pm</td>
+				<td class='step-details'>
+						URL Loaded :: https://thinking-tester-contact-list.herokuapp.com/login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:16 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:17 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:17 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:19 pm</td>
+				<td class='step-details'>
+						Clicked Add Contact
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:19 pm</td>
+				<td class='step-details'>
+						Entered First Name
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:19 pm</td>
+				<td class='step-details'>
+						Entered Last Name
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:19 pm</td>
+				<td class='step-details'>
+						Entered DOB
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:19 pm</td>
+				<td class='step-details'>
+						Entered Email
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:20 pm</td>
+				<td class='step-details'>
+						Entered Phone
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:20 pm</td>
+				<td class='step-details'>
+						Entered First Address
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:20 pm</td>
+				<td class='step-details'>
+						Entered Second Address
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:20 pm</td>
+				<td class='step-details'>
+						Entered City
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:20 pm</td>
+				<td class='step-details'>
+						Entered State
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:21 pm</td>
+				<td class='step-details'>
+						Entered Postal
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:21 pm</td>
+				<td class='step-details'>
+						Entered Country
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:21 pm</td>
+				<td class='step-details'>
+						Submitted Contact Form
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:10:23 pm</td>
+				<td class='step-details'>
+						Contact added successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Contact_Added_Successfully_1757958023405.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Contact_Added_Successfully_1757958023405.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Add Contact - Duplicate Check</span>
+						<span class='test-time'>Sep 15, 2025 11:10:24 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:10:24 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:10:30 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+301ms</span>
+</div>
+<div class='test-desc'>Validate duplicate contact handling </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:26 pm</td>
+				<td class='step-details'>
+						URL Loaded :: https://thinking-tester-contact-list.herokuapp.com/login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:27 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:27 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:27 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:30 pm</td>
+				<td class='step-details'>
+						Submitted duplicate contact
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:10:30 pm</td>
+				<td class='step-details'>
+						Duplicate contact scenario validated
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>Add Contact - Phone Field Validation</span>
+						<span class='test-time'>Sep 15, 2025 11:10:31 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:10:31 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:10:36 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+745ms</span>
+</div>
+<div class='test-desc'>Validate phone field allows only numbers </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:33 pm</td>
+				<td class='step-details'>
+						URL Loaded :: https://thinking-tester-contact-list.herokuapp.com/login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:33 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:33 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:33 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:35 pm</td>
+				<td class='step-details'>
+						Entered alphabets in Phone field
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:36 pm</td>
+				<td class='step-details'>
+						Submitted Contact Form
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:10:36 pm</td>
+				<td class='step-details'>
+						Phone field validation successful
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>Cancel Edit Contact Test</span>
+						<span class='test-time'>Sep 15, 2025 11:10:37 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:10:37 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:10:39 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+409ms</span>
+</div>
+<div class='test-desc'>Verify canceling an edit does not save changes </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:38 pm</td>
+				<td class='step-details'>
+						Navigated to URL :: https://thinking-tester-contact-list.herokuapp.com/login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:39 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:39 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:39 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:10:39 pm</td>
+				<td class='step-details'>
+						Failed cancel edit: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[text()='sachin dendulkar'])[1]"}
+  (Session info: chrome=140.0.7339.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7d91d2d6cdeb475393de34bb4b912705, findElement {using=xpath, value=(//td[text()='sachin dendulkar'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\anupk\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54176}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54176/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d91d2d6cdeb475393de34bb4b912705
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Cancel_Edit_Failed_1757958039814.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Cancel_Edit_Failed_1757958039814.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>Edit Contact Test</span>
+						<span class='test-time'>Sep 15, 2025 11:10:41 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:10:41 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:10:43 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+357ms</span>
+</div>
+<div class='test-desc'>Verify user can edit an existing contact </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:42 pm</td>
+				<td class='step-details'>
+						Navigated to URL :: https://thinking-tester-contact-list.herokuapp.com/login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:43 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:43 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:43 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:10:43 pm</td>
+				<td class='step-details'>
+						Failed to edit contact: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[text()='sachin dendulkar'])[1]"}
+  (Session info: chrome=140.0.7339.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [752159e750f4c665b8174c8951b465d4, findElement {using=xpath, value=(//td[text()='sachin dendulkar'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\anupk\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54202}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54202/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 752159e750f4c665b8174c8951b465d4
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Edit_Contact_Failed_1757958043677.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Edit_Contact_Failed_1757958043677.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>Sign Up - Blank Fields</span>
+						<span class='test-time'>Sep 15, 2025 11:10:45 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:10:45 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:10:48 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+382ms</span>
+</div>
+<div class='test-desc'>Verify registration fails with empty fields </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:46 pm</td>
+				<td class='step-details'>
+						Launch URL :: https://thinking-tester-contact-list.herokuapp.com/login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:47 pm</td>
+				<td class='step-details'>
+						Clicked Sign Up
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:47 pm</td>
+				<td class='step-details'>
+						Left First Name blank
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:48 pm</td>
+				<td class='step-details'>
+						Left Last Name blank
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:48 pm</td>
+				<td class='step-details'>
+						Left Email blank
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:48 pm</td>
+				<td class='step-details'>
+						Left Password blank
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:48 pm</td>
+				<td class='step-details'>
+						Clicked Sign Up
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:48 pm</td>
+				<td class='step-details'>
+						Validated Error Message
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:10:48 pm</td>
+				<td class='step-details'>
+						Proper error shown for blank fields
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/SignUp_BlankFields_1757958048520.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/SignUp_BlankFields_1757958048520.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Sign Up - Existing Email</span>
+						<span class='test-time'>Sep 15, 2025 11:10:49 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:10:49 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:10:52 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+158ms</span>
+</div>
+<div class='test-desc'>Verify registration fails with existing email </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:51 pm</td>
+				<td class='step-details'>
+						Launch URL :: https://thinking-tester-contact-list.herokuapp.com/login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:52 pm</td>
+				<td class='step-details'>
+						Clicked Sign Up
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:52 pm</td>
+				<td class='step-details'>
+						Entered First Name :: sachin
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:52 pm</td>
+				<td class='step-details'>
+						Entered Last Name :: dendulkar
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:52 pm</td>
+				<td class='step-details'>
+						Entered Existing Email :: test@mail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:52 pm</td>
+				<td class='step-details'>
+						Entered Password :: sachin123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:52 pm</td>
+				<td class='step-details'>
+						Validated error message
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:52 pm</td>
+				<td class='step-details'>
+						Clicked Sign Up
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:10:52 pm</td>
+				<td class='step-details'>
+						Proper error shown for existing email
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/SignUp_ExistingEmail_1757958052938.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/SignUp_ExistingEmail_1757958052938.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>Sign Up - Valid Inputs</span>
+						<span class='test-time'>Sep 15, 2025 11:10:54 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:10:54 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:10:57 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+414ms</span>
+</div>
+<div class='test-desc'>Verify sign-up with valid email and password </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:55 pm</td>
+				<td class='step-details'>
+						Launch URL :: https://thinking-tester-contact-list.herokuapp.com/login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:56 pm</td>
+				<td class='step-details'>
+						Clicked Sign Up
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:56 pm</td>
+				<td class='step-details'>
+						Entered First Name :: sachin
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:57 pm</td>
+				<td class='step-details'>
+						Entered Last Name :: dendulkar
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:57 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:57 pm</td>
+				<td class='step-details'>
+						Entered Password :: sachin123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:10:57 pm</td>
+				<td class='step-details'>
+						Clicked Sign Up
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:10:57 pm</td>
+				<td class='step-details'>
+						Registration successful
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/SignUp_Valid_1757958057598.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/SignUp_Valid_1757958057598.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Edit Contact Validation Test</span>
+						<span class='test-time'>Sep 15, 2025 11:10:58 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:10:58 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:11:01 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+352ms</span>
+</div>
+<div class='test-desc'>Verify validation errors during edit </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:00 pm</td>
+				<td class='step-details'>
+						Navigated to URL :: https://thinking-tester-contact-list.herokuapp.com/login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:00 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:00 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:01 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:11:01 pm</td>
+				<td class='step-details'>
+						Validation check failed: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[text()='sachin dendulkar'])[1]"}
+  (Session info: chrome=140.0.7339.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7d72377070b0b05cc3ddf0db665ffa16, findElement {using=xpath, value=(//td[text()='sachin dendulkar'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\anupk\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54309}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54309/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d72377070b0b05cc3ddf0db665ffa16
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Validation_Edit_Failed_1757958061229.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Validation_Edit_Failed_1757958061229.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>Valid Login Test</span>
+						<span class='test-time'>Sep 15, 2025 11:11:02 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:11:02 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:11:06 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+302ms</span>
+</div>
+<div class='test-desc'>Verify login with valid credentials </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:04 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:04 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:04 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:05 pm</td>
+				<td class='step-details'>
+						Login Success
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:11:06 pm</td>
+				<td class='step-details'>
+						Scenario verified Successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Scenario verified Successfully_1757958066079.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Scenario verified Successfully_1757958066079.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify back button after logout</span>
+						<span class='test-time'>Sep 15, 2025 11:11:07 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:11:07 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:11:23 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+214ms</span>
+</div>
+<div class='test-desc'>User should remain on login page after navigating back post-logout </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:09 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:09 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:09 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:10 pm</td>
+				<td class='step-details'>
+						Login Success
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:11 pm</td>
+				<td class='step-details'>
+						Clicked Logout
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:13 pm</td>
+				<td class='step-details'>
+						Clicked browser back button
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:11:23 pm</td>
+				<td class='step-details'>
+						Back button after logout test failed: Expected condition failed: waiting for visibility of element located by By.xpath: //p[text()='Log In:'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\anupk\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52677}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52677/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7e6135ffdca6429cf23b88c56139a029
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Back_After_Logout_Failure_1757958083603.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Back_After_Logout_Failure_1757958083603.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify delete confirmation</span>
+						<span class='test-time'>Sep 15, 2025 11:11:25 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:11:25 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:11:30 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+371ms</span>
+</div>
+<div class='test-desc'>Confirmation alert should appear before deletion </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:27 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:27 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:27 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:27 pm</td>
+				<td class='step-details'>
+						Contact exists before deletion :: ANUP KUMAR
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:30 pm</td>
+				<td class='step-details'>
+						Clicked delete icon for contact :: ANUP KUMAR
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:30 pm</td>
+				<td class='step-details'>
+						Cancelled delete
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify deleting a contact</span>
+						<span class='test-time'>Sep 15, 2025 11:11:32 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:11:32 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:11:37 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+960ms</span>
+</div>
+<div class='test-desc'>Contact should be removed from list after deletion </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:33 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:34 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:34 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:34 pm</td>
+				<td class='step-details'>
+						Contact exists before deletion :: ANUP KUMAR
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:36 pm</td>
+				<td class='step-details'>
+						Clicked delete icon for contact :: ANUP KUMAR
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:36 pm</td>
+				<td class='step-details'>
+						Confirmed deletion
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:11:37 pm</td>
+				<td class='step-details'>
+						Contact deleted successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Delete_Contact_Success_1757958097015.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Delete_Contact_Success_1757958097015.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify deleted contact does not reappear after refresh</span>
+						<span class='test-time'>Sep 15, 2025 11:11:38 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:11:38 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:11:43 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+424ms</span>
+</div>
+<div class='test-desc'>Deleted contact should remain removed after page refresh </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:40 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:40 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:40 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:40 pm</td>
+				<td class='step-details'>
+						Contact exists before deletion :: ANUP KUMAR
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:42 pm</td>
+				<td class='step-details'>
+						Clicked delete icon for contact :: ANUP KUMAR
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:43 pm</td>
+				<td class='step-details'>
+						Refreshed page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:11:43 pm</td>
+				<td class='step-details'>
+						Deleted contact did not reappear after refresh
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Delete_Contact_Refresh_1757958103774.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Delete_Contact_Refresh_1757958103774.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify login required to access contact list directly</span>
+						<span class='test-time'>Sep 15, 2025 11:11:45 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:11:45 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:11:59 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+690ms</span>
+</div>
+<div class='test-desc'>User should be redirected to login page when accessing contact list without login </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:47 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:47 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:47 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:48 pm</td>
+				<td class='step-details'>
+						Login Success
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:11:49 pm</td>
+				<td class='step-details'>
+						Navigated directly to contact list URL
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:11:59 pm</td>
+				<td class='step-details'>
+						Direct access test failed: Expected condition failed: waiting for visibility of element located by By.xpath: //p[text()='Log In:'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\anupk\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58770}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58770/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 111cd3c50d05e51e848ee8a4155a2566
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Direct_Access_Block_Failure_1757958119883.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Direct_Access_Block_Failure_1757958119883.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>Add Contact - Form Reset</span>
+						<span class='test-time'>Sep 15, 2025 11:12:01 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:12:01 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:12:06 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+272ms</span>
+</div>
+<div class='test-desc'>Verify form resets after adding a contact </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:03 pm</td>
+				<td class='step-details'>
+						URL Loaded :: https://thinking-tester-contact-list.herokuapp.com/login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:03 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:04 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:04 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:06 pm</td>
+				<td class='step-details'>
+						Submitted Contact Form
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:12:06 pm</td>
+				<td class='step-details'>
+						Form reset verified successfully
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify login state persists after refresh</span>
+						<span class='test-time'>Sep 15, 2025 11:12:08 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:12:08 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:12:12 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+966ms</span>
+</div>
+<div class='test-desc'>User should remain logged in after refreshing the page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:09 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:10 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:10 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:11 pm</td>
+				<td class='step-details'>
+						Login Success
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:11 pm</td>
+				<td class='step-details'>
+						Refreshed the page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:12:12 pm</td>
+				<td class='step-details'>
+						Login state persisted after refresh
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Refresh_Login_State_1757958132094.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Refresh_Login_State_1757958132094.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify logout redirects to login page</span>
+						<span class='test-time'>Sep 15, 2025 11:12:13 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:12:13 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:12:18 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+953ms</span>
+</div>
+<div class='test-desc'>User should be redirected to login page after logout </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:15 pm</td>
+				<td class='step-details'>
+						Entered Email :: veera.pandi@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:15 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:15 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:16 pm</td>
+				<td class='step-details'>
+						Login Success
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:17 pm</td>
+				<td class='step-details'>
+						Clicked Logout
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:12:18 pm</td>
+				<td class='step-details'>
+						Logout redirected to login page successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Logout_Success_1757958138447.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Logout_Success_1757958138447.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='40'>
+					<div class='test-heading'>
+						<span class='test-name'>invalid Login Test</span>
+						<span class='test-time'>Sep 15, 2025 11:12:19 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:12:19 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:12:22 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+997ms</span>
+</div>
+<div class='test-desc'>Verify login with invalid password </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:21 pm</td>
+				<td class='step-details'>
+						Entered Email
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:21 pm</td>
+				<td class='step-details'>
+						Entered Password
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:22 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:22 pm</td>
+				<td class='step-details'>
+						Assertion successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:12:22 pm</td>
+				<td class='step-details'>
+						Scenario verified Successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Scenario verified Successfully_1757958142847.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Scenario verified Successfully_1757958142847.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='42'>
+					<div class='test-heading'>
+						<span class='test-name'>empty Login Test</span>
+						<span class='test-time'>Sep 15, 2025 11:12:24 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:12:24 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:12:26 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+504ms</span>
+</div>
+<div class='test-desc'>Verify login with empty fields </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:26 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:26 pm</td>
+				<td class='step-details'>
+						Assertion successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:12:26 pm</td>
+				<td class='step-details'>
+						Scenario verified Successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Scenario verified Successfully_1757958146712.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Scenario verified Successfully_1757958146712.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='44'>
+					<div class='test-heading'>
+						<span class='test-name'>invalid Login email Test</span>
+						<span class='test-time'>Sep 15, 2025 11:12:28 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:12:28 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:12:30 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+278ms</span>
+</div>
+<div class='test-desc'>Verify login with invalid email format </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:29 pm</td>
+				<td class='step-details'>
+						Entered Email :: test.test
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:30 pm</td>
+				<td class='step-details'>
+						Entered Password :: Veera@123
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:30 pm</td>
+				<td class='step-details'>
+						Clicked Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:12:30 pm</td>
+				<td class='step-details'>
+						Login failed: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Incorrect username or password']"}
+  (Session info: chrome=140.0.7339.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00bca41c954cd54000634b1c041e590b, findElement {using=xpath, value=//span[text()='Incorrect username or password']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\anupk\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58963/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00bca41c954cd54000634b1c041e590b
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/login Failed_1757958150358.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/login Failed_1757958150358.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='46'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify password mask Test</span>
+						<span class='test-time'>Sep 15, 2025 11:12:31 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 15, 2025 11:12:31 pm</span>
+	<span class='label end-time'>Sep 15, 2025 11:12:33 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+964ms</span>
+</div>
+<div class='test-desc'>Verify password field masks input </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:12:33 pm</td>
+				<td class='step-details'>
+						Password field is masked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:12:33 pm</td>
+				<td class='step-details'>
+						Scenario verified Successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Scenario verified Successfully_1757958153838.png' src='C:\Users\anupk\Downloads\contact-management-automation (2)/target/screenshots/Scenario verified Successfully_1757958153838.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>23</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sep 15, 2025 11:10:04 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sep 15, 2025 11:12:34 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 2m 29s+707ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 23,
+				passParent: 17,
+				failParent: 6,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 6,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "Add Contact - Missing Required Fields":5.963,"Add Contact - Valid Details":8.469,"Add Contact - Duplicate Check":5.301,"Add Contact - Phone Field Validation":4.745,"Cancel Edit Contact Test":2.409,"Edit Contact Test":2.357,"Sign Up - Blank Fields":3.382,"Sign Up - Existing Email":3.158,"Sign Up - Valid Inputs":3.414,"Edit Contact Validation Test":2.352,"Valid Login Test":3.302,"Verify back button after logout":16.214,"Verify delete confirmation":5.371,"Verify deleting a contact":4.96,"Verify deleted contact does not reappear after refresh":5.424,"Verify login required to access contact list directly":14.69,"Add Contact - Form Reset":5.272,"Verify login state persists after refresh":3.966,"Verify logout redirects to login page":4.953,"invalid Login Test":2.997,"empty Login Test":2.504,"invalid Login email Test":2.278,"Verify password mask Test":1.964
+			};
+		</script>
+	
+		  <script src='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>
