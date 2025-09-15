@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ContactManagementSuite" parallel="tests" thread-count="1">
+  <test name="ChromeTests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+        <class name="tests.LoginTests"/>
+        <class name="tests.ContactTests"/>
+        <class name="tests.DeleteContactTests"/>
+        <class name="tests.EditContactPageTests"/>
+        <class name="tests.RegistrationTests"/>
+        <class name="tests.SessionTests"/>
+<!--    <class name="tests.ContactFormValidationTests"/>-->
+<!--    <class name="tests.UITests"/>-->
+    </classes>
+  </test>
+
+<!--  <test name="FirefoxTests">-->
+<!--    <parameter name="browser" value="firefox"/>-->
+<!--    <classes>-->
+<!--      <class name="tests.LoginTests"/>-->
+<!--      <class name="tests.ContactTests"/>-->
+<!--    </classes>-->
+<!--  </test>-->
+</suite>
