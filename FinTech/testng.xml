@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ContactManagementSuite" parallel="tests" thread-count="1">
+  <test name="ChromeTests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+        <class name="tests.LoginTests"/>
+        <class name="tests.AccountTests"/>
+        <class name="tests.FundsTransferTests"/>
+        <class name="tests.LoginTests"/>
+        <class name="tests.CustomerSupportTests"/>
+        <class name="tests.NavigationUITests"/>
+    </classes>
+  </test>
+
+<!--  <test name="FirefoxTests">-->
+<!--    <parameter name="browser" value="firefox"/>-->
+<!--    <classes>-->
+<!--      <class name="tests.LoginTests"/>-->
+<!--      <class name="tests.ContactTests"/>-->
+<!--    </classes>-->
+<!--  </test>-->
+</suite>
